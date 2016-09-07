@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>this function</title>
+<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+/* $(document).ready(function () {
+    $('#btn_inner').click(function () {
+        alert('Button is clicked');
+    });
+   $('#outer_div').click(function () {
+       alert('Div is clicked');
+   });
+}); */
+
+/* $(document).ready(function () {
+    $('#btn_inner').click(function () {
+        alert('Button is clicked');
+    });
+    $('#outer_div').click(function (e) {
+        if (e.target == this) alert('Div is clicked');
+    });
+}); */
+
+$(document).ready(function () {
+    $('#btn_inner').click(function (e) {
+        alert('Button is clicked');
+        e.stopPropagation();
+    });
+    $('#outer_div').click(function () {
+        alert('Div is clicked');
+    });
+});
+</script>
+</head>
+<body>
+<div id="outer_div">
+	    Hello, World!
+	    <input type="button" id="btn_inner" value="Click Me" />
+    </div>
+</body>
+</html>

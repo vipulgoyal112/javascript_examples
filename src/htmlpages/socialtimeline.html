@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Social Timeline</title>
+<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+<script type="text/javascript" src="../js/jquery.colorbox.min.js"></script>
+<script type="text/javascript" src="../js/jquery.dpSocialTimeline.js"></script>
+</head>
+<body>
+<div id="socialTimeline"></div>
+</body>
+</html>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#socialTimeline').dpSocialTimeline({
+		custom: 
+	    { 
+	        '1stwebdesigner': {
+	            name: '1stwebdesigner', 
+	            url: 'http://feeds.feedburner.com/1stwebdesigner', 
+	            icon: 'http://cdn1.1stwebdesigner.com/wp-content/themes/1stwd/favicon.ico',
+	            limit: 5 
+	        }
+	    }
+	});
+});
+</script>

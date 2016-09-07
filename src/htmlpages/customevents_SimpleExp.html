@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="javascript:AssignEvent();">
+	<form id="msgbox" action="#" method="get">
+		<label for="msg" id="CustomLabel">your message</label>
+		<button onclick="javascript:FireEvent();">SEND</button>
+	</form>
+</body>
+</html>
+<script type="text/javascript">
+	//Define a new event.
+	var SpecialEvent = new CustomEvent("SpecialMessage", {
+		detail : {
+			message : "Hello There",
+			time : new Date()
+		},
+		bubbles : true,
+		cancelable : true
+	});
+
+	function AssignEvent() {
+		// Obtain the object reference.
+		var Label = document.getElementById("CustomLabel");
+
+		// Assign an event to the object.
+		Label.addEventListener("SpecialMessage", HandleEvent, false);
+	}
+
+	function FireEvent() {
+		// Obtain the object reference.
+		var Label = document.getElementById("CustomLabel");
+
+		// Fire the event.
+		Label.dispatchEvent(SpecialEvent);
+	}
+	function HandleEvent(event) {
+		// Display the event information.
+		document.getElementById("CustomLabel").innerHTML = "Control: "
+				+ event.currentTarget.id + "<br />Message: "
+				+ event.detail.message + "<br />Time sent: "
+				+ event.detail.time.toTimeString();
+	}
+</script>
+

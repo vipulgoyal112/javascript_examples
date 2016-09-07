@@ -1,0 +1,5 @@
+@CHARSET "ISO-8859-1";
+
+.bluColor{color: #0000FF;}
+.backgroundColorblu{background-color: #3b73b9;}
+.button{border-size: 0px; border-style: none; background: inherit; font: inherit; color: blue; cursor: hand; cursor: pointer; padding: 0px;}

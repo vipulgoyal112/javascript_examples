@@ -1,0 +1,1600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>this function</title>
+<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../js/AjaxUsage.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/fr.css">
+<script type="text/javascript">
+
+function actionButtonReady (classname) {
+    $(classname).mouseover(function() {
+		if(this.timer) {clearTimeout(this.timer);}
+    	$(this).find(classname+"-b").show();
+	}).mouseout(function() {
+		var _this = this;
+		var fn = function() {
+			$(_this).find(classname+"-b").hide();
+		};
+		_this.timer = setTimeout(fn, 100);
+	});
+}
+$(function(){
+	actionButtonReady(".jq-d");
+	//disable dropdown in ipad
+	$(document).bind('touchstart click', function(e) {
+			var _this = $(e.target);
+			//var drpDownClick = _this.parents(".jq-d").length;
+			//var isDrpDownVisible = $('.jq-rgn-b').is(":visible");
+			//alert(_this.parents(".jq-d").length == 0);
+			//if (_this.parents(".jq-d").length == 0) {
+			if (_this.hasClass('jq-d')) {
+				//$(".jq-d-b").hide();
+				alert(1);
+			} else {
+				alert(2);
+			}
+			
+			/*var autoCompleteListClick = _this.hasClass('jq-comp-list');
+			var isListVisible = $('.jq-auto-complete').is(":visible");
+			var isEditClicked = _this.hasClass('jq-edit');
+			var isTextBoxClicked = _this.hasClass('jq-inline-addcompany') || _this.hasClass('jq-addcompany');
+			if(!isTextBoxClicked && !autoCompleteListClick && isListVisible && !isEditClicked) {
+				if($(".jq-inline-addcompany").is(":visible")) {
+					replaceHtml();
+				} else {
+					$(".jq-addcompany").val('');
+				}
+				$('.jq-autCompleteSuggestion').html('');
+			}*/												
+	});
+
+});
+</script>
+
+</head>
+<body>
+<div viewid="C:10186" section="header" class="mainContent jq-p-p-section">
+<div class="heading">
+	Market Insights Comparisons for <br><span id="jq-top-header-comp">
+	        	<h2 title="Apple Inc.">Apple Inc.</h2>
+	        <!-- end header --></span>
+</div>
+
+<div class="navChartArea">
+	<div class="fl pos-r">
+		<a class="jq_clicktrack frlogo-ac jq_anchor_add_code" item="powered.by.firstrain" act="click" href="http://10.10.10.40:16080" target="Firstrain_window">
+			<span class="frlogo-txt">powered by:</span>
+			<div><span class="frlogo">FirstRain</span></div>
+		</a>
+	</div>
+	<div class="jq-d actn-wrp">
+		<div class="actn-btn">
+			<a href="javascript:void(0);"><span><span>Choose a different view</span></span></a>
+		</div>
+		<div class="jq-d-b hidden actn-nv" style="display: none;">
+			<div class="vw-drdw">
+				<div class="vg-hA" id="fr-drpdwn-ce">
+					<a onclick="changeView('#fr-comparitorContent', 'competitorseventsview.do?entityid=10186&amp;entrprsid=177', false, '-1', this, null, null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="companyoverviewmajorevents" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-vgha current">
+						<span class="icon"></span>Company Overview &ndash; Major Events</a>
+				</div>
+				<div class="vg-h jq-h">Business Basics</div>
+				
+				<ul viewid="C:10186" section="business.basics" class="vg jq-vg jq-p-p-section">
+				<li id="fr-InitiativesandMarketShare" class="str-8"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'InitiativesandMarketShare', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="InitiativesandMarketShare" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Initiatives and Market Share</a></li>
+				<li id="fr-ManagementandBoardChanges" class="str-3"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'ManagementandBoardChanges', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="ManagementandBoardChanges" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Management and Board Changes</a></li>
+				<li id="fr-CorporateTransactions" class="str-3"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'CorporateTransactions', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="CorporateTransactions" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Corporate Transactions</a></li>
+				<li id="fr-RegulatoryLitigationandPatents" class="str-5"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'RegulatoryORLitigationandPatents', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="Regulatory,LitigationandPatents" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Regulatory, Litigation and Patents</a></li>
+				<li id="fr-CorporateActivities" class="str-5"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'CorporateActivities', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="CorporateActivities" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Corporate Activities</a></li>
+				<li id="fr-FinancialResults" class="str-3"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'FinancialResults', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="FinancialResults" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Financial Results</a></li>
+				</ul>
+				
+				<div class="vg-h">Core Business Lines</div>
+				
+				<ul viewid="C:10186" section="business.lines" class="vg jq-vg jq-p-p-section">
+							<li id="fr-Smartphones" class="str-5"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'B:Smartphones&lt;fr&gt;Smartphones', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="Smartphones" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Smartphones</a></li>
+							<li id="fr-OperatingSystemOSSoftware" class="str-4"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'B:OperatingSystemOSSoftware&lt;fr&gt;Operating%20System%20(OS)%20Software', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="Operating System (OS) Software" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Operating System (OS) Software</a></li>
+							<li id="fr-MobileOperatingSystems" class="str-3"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'B:MobileOperatingSystems&lt;fr&gt;Mobile%20Operating%20Systems', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="Mobile Operating Systems" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Mobile Operating Systems</a></li>
+							<li id="fr-WirelessHandsets" class="str-3"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'B:WirelessHandsets&lt;fr&gt;Wireless%20Handsets', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="Wireless Handsets" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Wireless Handsets</a></li>
+							<li id="fr-MobileMediaSoftware" class="str-3"><a onclick="changeView('#fr-comparitorContent', 'competitorswebresultsview.do?entityid=10186&amp;q=C:AppleInc&amp;entrprsid=177', false, '-1', this, 'B:MobileMediaSoftware&lt;fr&gt;Mobile%20Media%20Software', null,'volumechart.do?entrprsid=177&amp;companyid=10186');" metadata="Mobile Media Software" act="choose.different.view" item="topic" href="javascript:void(0);" class="jq-touch-click"><span class="icon"></span>Mobile Media Software</a></li>
+				</ul>
+				
+				<div class="vg-h-b">Strategic Priorities</div>
+				<div class="pl-10"><i>Configurable - Your key strategies</i></div>
+
+				<ul viewid="C:10186" section="Strategic Priorities" class="bot vg jq-vg jq-p-p-section">
+					<li class="str-8" id="fr-EmergingMarketsExpansion"><span class="icon"></span>Emerging Markets Expansion</li>
+					<li class="str-4" id="fr-WorkforceMobility"><span class="icon"></span>Workforce Mobility</li>
+					<li id="fr-Security" class="str-2"><span class="icon"></span>Security</li>
+					<li class="str-2" id="fr-Globalization"><span class="icon"></span>Globalization</li>
+					<li class="str-1" id="fr-etc">(etc.)</li>
+				</ul>
+		<!-- end viewDropdown --></div>
+		</div>
+	</div>
+    <div class="cl"></div>
+    
+    <div class="comparitorChart">
+    	<div id="fr-load"></div>
+	    <div id="fr-chart">
+	    	<div class="jq-lgnd"><ul class="legend"><li title="Apple Inc." class="cp-1"><span class="icon"></span><div class="ld-tr">Apple Inc.</div></li><li title="Samsung Electronics Co., Ltd." class="cp-2"><span class="icon"></span><div class="ld-tr">Samsung Electronics Co., Ltd.</div></li><li title="Samsung Group" class="cp-3"><span class="icon"></span><div class="ld-tr">Samsung Group</div></li><li title="Microsoft Corporation" class="cp-4"><span class="icon"></span><div class="ld-tr">Microsoft Corporation</div></li><li title="Google Inc." class="cp-5"><span class="icon"></span><div class="ld-tr">Google Inc.</div></li></ul></div> 
+	    	<div class="pos-r" id="fr-canvas"><canvas id="cvs" width="835" height="150" style="position: relative; top: 0px; left: 0px; cursor: default;"></canvas></div>
+	    </div>
+    <!-- end comparitorChart --></div>
+<!-- end navChartArea --></div>
+
+<div class="comparitorContent" id="fr-comparitorContent">
+<div class="headerArea">
+    <h1>Company Overview &amp; Major Event Timeline</h1>
+    <!-- end headerArea --></div>
+	   	<div sectionid="C:10186" viewid="C:10186" class="companyUnit mainUnit jq-p-p-section">
+	        <div id="jq-comp-event-header" class="header">
+	        	<h2 title="Apple Inc.">Apple Inc.</h2>
+	        <!-- end header --></div>
+        <div class="content jq_vscroll_container mCustomScrollbar _mCS_1"><div style="position:relative; height:100%; overflow:hidden; max-width:100%;" id="mCSB_1" class="mCustomScrollBox"><div style="position:relative; top:0;" class="mCSB_container">
+        	<div class="scroll-pd">
+			<p class="cp-descr">Apple Inc designs, manufactures, and markets personal computers, mobile communication devices, media devices and portable digital music and video players and sells a variety of related software, services, peripherals, and networking solutions.</p>
+   		<div class="cl"></div>
+   		<div class="facts">
+	   		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		        <tbody><tr>
+						<td class="bold">Last Price:</td>
+						<td class="bold">Full Time Employees:</td>
+				</tr>
+		 		<tr>
+						<td>$524.90</td>
+						<td>72,800</td>
+		 		</tr>
+			</tbody></table>
+		</div>
+	<div class="facts">
+    	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+        	<tbody><tr>
+            	<td class="facts-c"><div class="facts-hd">KEY FINANCIALS:</div></td>
+            	<td width="60" align="center" class="facts-c">Q3-2013</td>
+	            	<td width="60" align="center" class="facts-c">Q3-2012</td>
+	            	<td width="80" align="center" class="facts-c">YoY Growth</td>
+        	</tr>
+	        	<tr><td height="3" colspan="4"></td></tr>
+        	<tr>
+            	<td class="bold">Revenue</td>
+		            <td align="center">35.32B</td>
+		            <td align="center">35.02B</td>
+   		   			<td align="center">0.86%</td>
+   			</tr>
+        	<tr>
+            	<td class="bold">Net Income</td>
+		            <td align="center">6.90B</td>
+		            <td align="center">8.82B</td>
+   		   			<td align="center" class="colorRed">-21.80%</td>
+        	</tr>
+	        	<tr>
+	            	<td class="bold">Operating Margin</td>
+			            <td align="center">26.05%</td>
+			            <td align="center">33.04%</td>
+	   		   			<td align="center" class="colorRed">-21.16%</td>
+	        	</tr>
+    	</tbody></table>
+	</div>
+		<div class="mb-10">
+	<div class="ern-call">
+			Recent Earnings Call for 
+				fiscal
+			Q4&nbsp;
+				2014 
+			was 10/28/2013
+	</div>
+		</div>
+	        	<div class="cl"></div>
+		        	<div subsection="management.changes" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Management Changes</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="DEPARTURE" class="mt-dept"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:23001975&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:23001975" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Doug Field</span>, Vice President <span class="bold"><span class="colorRed">LEFT</span></span> for Tesla Motors, Inc.</a>
+						<span class="dc-dt">24-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="HIRE" class="mt-hire"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22897258&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22897258" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Angela Ahrendts</span> <span class="bold"><span class="colorGreen">JOINED</span></span> as Senior Vice President of Retail and Online Stores from Burberry Group plc</a>
+						<span class="dc-dt">01-Jun-2014</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="INTERNAL MOVE" class="mt-move"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22161488&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22161488" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Bob Mansfield</span>, Senior Vice President of Technologies <span class="bold"><span class="colorBlue">MOVED</span></span> </a>
+						<span class="dc-dt">29-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="HIRE" class="mt-hire"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:21920787&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:21920787" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Paul Deneve</span> <span class="bold"><span class="colorGreen">JOINED</span></span> as Vice President of Special Projects from Gucci Group N.V.</a>
+						<span class="dc-dt">03-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+		        	<div subsection="event.timeline" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Event Timeline</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23034450&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23034450" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">New iPhones power Apple to revenue bump, but earnings fall</a>
+						<span class="dc-dt">28-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22997036&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22997036" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Icahn Demands $150 Billion Buyback in Letter to Apple CEO Tim Cook - John Paczkowski - News - AllThingsD</a>
+						<span class="dc-dt">24-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22972062&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22972062" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple reveal new iPad Air weighing just ONE pound</a>
+						<span class="dc-dt">22-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22904081&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22904081" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple hires Burberry CEO Angela Ahrendts to strengthen retail and online stores</a>
+						<span class="dc-dt">15-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22677172&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22677172" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple sells 9 million new iPhones on first weekend</a>
+						<span class="dc-dt">23-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22660045&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22660045" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Tim Cook Is In The Palo Alto Apple Store Right Now</a>
+						<span class="dc-dt">20-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22579199&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22579199" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apples iPhone 5C Pre-Orders to go live on Friday 12:01 AM Pacific, 3:01 AM Eastern</a>
+						<span class="dc-dt">12-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22556035&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22556035" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">iPhone 5s Touch ID Isn't Coming to iPhone Apps Just Yet</a>
+						<span class="dc-dt">10-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22520207&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22520207" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">U.S. District Judge to Appoint Monitor to Review Apples Antitrust Compliance Policies</a>
+						<span class="dc-dt">06-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22527840&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22527840" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">NY judge tells Apple to modify contracts with publishers to bar electronic book price-fixing (Business)</a>
+						<span class="dc-dt">06-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22097687&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22097687" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple Pops on Earnings Beat, 31M iPhones</a>
+						<span class="dc-dt">23-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22087130&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22087130" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple reports major security breach; researcher says he issued warning</a>
+						<span class="dc-dt">22-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21972624&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21972624" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Judge Says Apple Are Guilty Of eBook Price Fixing</a>
+						<span class="dc-dt">10-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21720472&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21720472" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">DOJ to Apples Eddy Cue: Did your customers thank you for raising prices?</a>
+						<span class="dc-dt">13-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21687123&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21687123" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple Announces New MacPro, Macbook Air, iOS7, Mac OS Mavericks, iTunes Radio At WWDC 2013</a>
+						<span class="dc-dt">10-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21662924&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21662924" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">APPLE INC. : Apple denies giving government direct access to servers</a>
+						<span class="dc-dt">06-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21638795&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21638795" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple devices face import ban in light of ITC patent ruling</a>
+						<span class="dc-dt">04-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21627550&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21627550" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Government lawyer at NY trial: Apple drove up e-book prices in deal with publishers</a>
+						<span class="dc-dt">03-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21595748&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21595748" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple: 100 million iPod touches sold since 2007</a>
+						<span class="dc-dt">30-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21503480&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AAppleInc" catid="254739" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21503480" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Report: Apple kept billions of dollars in profits in Irish subsidiaries to avoid taxes</a>
+						<span class="dc-dt">21-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+				<div class="cl"></div>
+			</div>
+			<div class="cl"></div>
+	   </div><div style="position: absolute; display: block;" class="mCSB_scrollTools"><div style="position:relative;" class="mCSB_draggerContainer"><div style="position: absolute; height: 65px; top: 0px;" class="mCSB_dragger ui-draggable"><div style="position: relative; line-height: 65px;" class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+			<div class="moreLink">
+				<a href="redirect.do?rt=portal.event.page&amp;q=C:AppleInc" target="Firstrain_window" act="more.click" itemid="C:10186" class="jq_anchor_add_code jq_clicktrack">More</a>
+				<img class="outbnd-lnk" src="http://10.50.1.228:9090/static/ec/images/spacer.gif">
+			</div>
+
+	   	<!-- end companyUnit --></div>
+	<div id="home_carousel" class="jc-hm-wrp">
+		<div class="jc-hm jq_jcarousel" data-jcarousel="true">
+				<ul class="jc-hm-scroll jq_scroller" style="width: 1004px; left: 0px;">
+    	<li id="compunit-11110" sectionid="C:11110" viewid="C:10186" class="jc-hm-slide jq_slide jq-p-p-section" index="0">
+	    	<div class="companyUnit">
+		         <div class="header">
+		         	<div onclick="showCompetitorList('10186', '177', 'company-events.ftl', '11110', 'C:SamsungElectronicsCoLtd', this);" act="click" item="configure" class="configBtn">c</div>
+		            <h2 title="Samsung Electronics Co., Ltd.">Samsung Electronics Co., Ltd.</h2>
+		         <!-- end header --></div>
+        <div class="content jq_vscroll_container mCustomScrollbar _mCS_2"><div style="position:relative; height:100%; overflow:hidden; max-width:100%;" id="mCSB_2" class="mCustomScrollBox"><div style="position:relative; top:0;" class="mCSB_container">
+        	<div class="scroll-pd">
+   		<div class="cl"></div>
+   		<div class="facts">
+	   		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		        <tbody><tr>
+				</tr>
+		 		<tr>
+		 		</tr>
+			</tbody></table>
+		</div>
+		<div class="basicCpInfo">	
+			<div class="bold">Company Contact Information:</div>
+			<div class="mb-10"><a target="_blank" href="http://www.samsung.com" itemid="C:11110" item="companyurl" act="entity.click" class="jq_clicktrack">www.samsung.com</a></div>	
+		</div>
+	        	<div class="cl"></div>
+		        	<div subsection="management.changes" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Management Changes</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="HIRE" class="mt-hire"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22243785&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22243785" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Russell C Taylor</span> <span class="bold"><span class="colorGreen">JOINED</span></span> as Vice President of Corporate Marketing from Unilever PLC</a>
+						<span class="dc-dt">06-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="DEPARTURE" class="mt-dept"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22150208&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22150208" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Sung Yong Hong</span>, President, Turkey <span class="bold"><span class="colorRed">LEFT</span></span> for Samsung Group</a>
+						<span class="dc-dt">01-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="INTERNAL MOVE" class="mt-move"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22102560&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22102560" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">KK Park</span>, President, Africa <span class="bold"><span class="colorBlue">MOVED</span></span> to President, Southeast Asia</a>
+						<span class="dc-dt">23-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="INTERNAL MOVE" class="mt-move"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:21920774&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:21920774" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Gregory Lee</span>, President, Southeast Asia <span class="bold"><span class="colorBlue">MOVED</span></span> to President of Samsung Telecommunications America</a>
+						<span class="dc-dt">03-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="INTERNAL MOVE" class="mt-move"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:21920775&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:21920775" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Dale Sohn</span>, President of Samsung Telecommunications America <span class="bold"><span class="colorBlue">MOVED</span></span> to Executive Advisor</a>
+						<span class="dc-dt">03-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+		        	<div subsection="event.timeline" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Event Timeline</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23046221&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23046221" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung kicks off first developer conference</a>
+						<span class="dc-dt">29-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23034804&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23034804" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung announces screencasting SDK with multiscreen and overlay capabilities</a>
+						<span class="dc-dt">28-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23016017&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23016017" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung reports record profits driven by smartphone sales</a>
+						<span class="dc-dt">25-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22997417&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22997417" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung Electronics apologises to China consumers for mobile phone glitches</a>
+						<span class="dc-dt">24-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22984584&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22984584" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung acquires 7.4 percent share in Gorilla Glass maker Corning</a>
+						<span class="dc-dt">23-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22927826&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22927826" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung may stop seeking injunctions in Europe</a>
+						<span class="dc-dt">17-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22844330&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22844330" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung launches curved ‘Galaxy Round'</a>
+						<span class="dc-dt">09-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22832761&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22832761" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">ITC Ban on Older Samsung Mobile Devices Allowed to Stand</a>
+						<span class="dc-dt">08-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22821586&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22821586" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung Introduces New 13-megapixel Camera Module With Improved Optical Image Stabilization</a>
+						<span class="dc-dt">07-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22785756&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22785756" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung Electronics record third-quarter guidance beats analyst estimates</a>
+						<span class="dc-dt">03-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22700089&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22700089" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung to unveil its first smartphone with a curved display next month</a>
+						<span class="dc-dt">25-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22508853&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22508853" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung KNOX Available For Use By Consumers</a>
+						<span class="dc-dt">05-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22489833&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22489833" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung unveils smartwatch ahead of rival Apple</a>
+						<span class="dc-dt">04-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22313027&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22313027" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung workers are given 32 seconds to assemble phones</a>
+						<span class="dc-dt">14-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22276019&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22276019" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung violated Apple patents; U.S. import ban imposed by ITC</a>
+						<span class="dc-dt">09-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22238741&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22238741" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung prepares V-NAND 3D flash storage for mobile devices</a>
+						<span class="dc-dt">06-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22228700&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22228700" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Obama Administration Overrules Apple Import Ban</a>
+						<span class="dc-dt">05-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22141252&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22141252" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung becomes the worlds largest smartphone maker as Apples market share hits a three-year low</a>
+						<span class="dc-dt">26-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22121858&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22121858" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung sells 72.4 million smartphones, mobile revenues up 54% in Q2</a>
+						<span class="dc-dt">25-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21924649&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungElectronicsCoLtd" catid="282003" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21924649" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung Electronics estimates record operating profit in Q2</a>
+						<span class="dc-dt">04-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+				<div class="cl"></div>
+			</div>
+			<div class="cl"></div>
+	   </div><div style="position: absolute; display: block;" class="mCSB_scrollTools"><div style="position:relative;" class="mCSB_draggerContainer"><div style="position: absolute; height: 71px; top: 0px;" class="mCSB_dragger ui-draggable"><div style="position: relative; line-height: 71px;" class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+			<div class="moreLink">
+				<a href="redirect.do?rt=portal.event.page&amp;q=C:SamsungElectronicsCoLtd" target="Firstrain_window" act="more.click" itemid="C:11110" class="jq_anchor_add_code jq_clicktrack">More</a>
+				<img class="outbnd-lnk" src="http://10.50.1.228:9090/static/ec/images/spacer.gif">
+			</div>
+
+	    	<!-- end companyUnit --></div>
+    	</li>
+    	<li id="compunit-10706" sectionid="C:10706" viewid="C:10186" class="jc-hm-slide jq_slide jq-p-p-section" index="1">
+	    	<div class="companyUnit">
+		         <div class="header">
+		         	<div onclick="showCompetitorList('10186', '177', 'company-events.ftl', '10706', 'C:SamsungGroup', this);" act="click" item="configure" class="configBtn">c</div>
+		            <h2 title="Samsung Group">Samsung Group</h2>
+		         <!-- end header --></div>
+        <div class="content jq_vscroll_container mCustomScrollbar _mCS_3"><div style="position:relative; height:100%; overflow:hidden; max-width:100%;" id="mCSB_3" class="mCustomScrollBox"><div style="position:relative; top:0;" class="mCSB_container">
+        	<div class="scroll-pd">
+   		<div class="cl"></div>
+   		<div class="facts">
+	   		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		        <tbody><tr>
+				</tr>
+		 		<tr>
+		 		</tr>
+			</tbody></table>
+		</div>
+		<div class="basicCpInfo">	
+			<div class="bold">Company Contact Information:</div>
+			<div class="mb-10"><a target="_blank" href="http://www.samsung.com" itemid="C:10706" item="companyurl" act="entity.click" class="jq_clicktrack">www.samsung.com</a></div>	
+		</div>
+	        	<div class="cl"></div>
+		        	<div subsection="management.changes" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Management Changes</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="HIRE" class="mt-hire"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22150141&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22150141" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Sung Yong Hong</span> <span class="bold"><span class="colorGreen">JOINED</span></span> as Chief Executive Officer, Africa from Samsung Electronics Co., Ltd.</a>
+						<span class="dc-dt">01-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="INTERNAL MOVE" class="mt-move"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22150142&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22150142" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Kwang Kee Park</span>, Chief Executive Officer, Africa <span class="bold"><span class="colorBlue">MOVED</span></span> to Chief Executive Officer, South East Asia</a>
+						<span class="dc-dt">01-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="HIRE" class="mt-hire"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:21927025&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:21927025" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Danny Bowman</span> <span class="bold"><span class="colorGreen">JOINED</span></span> as Chief Sales Officer of Samsung Telecommunications America</a>
+						<span class="dc-dt">04-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+		        	<div subsection="event.timeline" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Event Timeline</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23057648&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23057648" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung quietly makes push for Tizen at its developer conference</a>
+						<span class="dc-dt">30-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23045981&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23045981" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Tuning in to the Samsung Developers Conference</a>
+						<span class="dc-dt">29-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23034530&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23034530" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Rabbit will be featured during keynote presentation at Samsung Developers Conference</a>
+						<span class="dc-dt">28-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22997109&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22997109" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Chip growth leads Samsung to another record profit</a>
+						<span class="dc-dt">24-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22984322&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22984322" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung acquires 7.4 percent share in Gorilla Glass maker Corning</a>
+						<span class="dc-dt">23-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22832773&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22832773" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">ITC Ban on Older Samsung Mobile Devices Allowed to Stand</a>
+						<span class="dc-dt">08-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22804068&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22804068" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung reports record-high 3Q profit, operating income rose 25 pc</a>
+						<span class="dc-dt">04-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22785732&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22785732" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Orange Business Services and Samsung sign strategic partnership agreement to build innovative, secure tablet solutions for enterprises</a>
+						<span class="dc-dt">03-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22700020&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22700020" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung provides tools to nudge Galaxy devices into enterprise</a>
+						<span class="dc-dt">25-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22527888&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22527888" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Roger Williams University Leverages Samsung Technologies to Create Collaborative Learning Environment in Support of Affordable Excellence Initiative</a>
+						<span class="dc-dt">06-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22489371&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22489371" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung unveils smartwatch in race to beat Apple for must-have holiday gift</a>
+						<span class="dc-dt">04-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22313032&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22313032" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Apple Vs. Samsung in America: Where Petty Patent Squabbles Meet Blatant Protectionism</a>
+						<span class="dc-dt">14-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22302909&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22302909" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung 55” KN55S9C Curved OLED TV Launches for $9K</a>
+						<span class="dc-dt">13-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22229052&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22229052" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung mass produces industrys first 3D NAND flash chips</a>
+						<span class="dc-dt">05-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22141482&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22141482" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Record Samsung Profits Fail to Impress Investors</a>
+						<span class="dc-dt">26-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21845302&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21845302" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung launches curved OLED TVs at $13,000</a>
+						<span class="dc-dt">26-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21834562&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21834562" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung Showcases Strategic Hospitality Alliances at HITEC 2013</a>
+						<span class="dc-dt">25-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21824102&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21824102" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung unveils new tablets</a>
+						<span class="dc-dt">24-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21790215&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21790215" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsung ATIV Tab 3 unveiled as world's thinnest Windows 8 tablet</a>
+						<span class="dc-dt">20-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21708936&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3ASamsungGroup" catid="254807" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21708936" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Samsungs 2013 Home Appliances Deliver Innovation That Delights and Design That Inspires</a>
+						<span class="dc-dt">12-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+				<div class="cl"></div>
+			</div>
+			<div class="cl"></div>
+	   </div><div style="position: absolute; display: block;" class="mCSB_scrollTools"><div style="position:relative;" class="mCSB_draggerContainer"><div style="position: absolute; height: 72px; top: 0px;" class="mCSB_dragger ui-draggable"><div style="position: relative; line-height: 72px;" class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+			<div class="moreLink">
+				<a href="redirect.do?rt=portal.event.page&amp;q=C:SamsungGroup" target="Firstrain_window" act="more.click" itemid="C:10706" class="jq_anchor_add_code jq_clicktrack">More</a>
+				<img class="outbnd-lnk" src="http://10.50.1.228:9090/static/ec/images/spacer.gif">
+			</div>
+
+	    	<!-- end companyUnit --></div>
+    	</li>
+    	<li id="compunit-3864" sectionid="C:3864" viewid="C:10186" class="jc-hm-slide jq_slide jq-p-p-section" index="2">
+	    	<div class="companyUnit">
+		         <div class="header">
+		         	<div onclick="showCompetitorList('10186', '177', 'company-events.ftl', '3864', 'C:MicrosoftCorporation', this);" act="click" item="configure" class="configBtn">c</div>
+		            <h2 title="Microsoft Corporation">Microsoft Corporation</h2>
+		         <!-- end header --></div>
+        <div class="content jq_vscroll_container mCustomScrollbar _mCS_4"><div style="position:relative; height:100%; overflow:hidden; max-width:100%;" id="mCSB_4" class="mCustomScrollBox"><div style="position:relative; top:0;" class="mCSB_container">
+        	<div class="scroll-pd">
+			<p class="cp-descr">Microsoft Corporation is engaged in developing, manufacturing, licensing and supporting software products, services and entertainment, and device hardware products.</p>
+   		<div class="cl"></div>
+   		<div class="facts">
+	   		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		        <tbody><tr>
+						<td class="bold">Last Price:</td>
+						<td class="bold">Full Time Employees:</td>
+				</tr>
+		 		<tr>
+						<td>$35.54</td>
+						<td>99,000</td>
+		 		</tr>
+			</tbody></table>
+		</div>
+	<div class="facts">
+    	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+        	<tbody><tr>
+            	<td class="facts-c"><div class="facts-hd">KEY FINANCIALS:</div></td>
+            	<td width="60" align="center" class="facts-c">Q4-2013</td>
+	            	<td width="60" align="center" class="facts-c">Q4-2012</td>
+	            	<td width="80" align="center" class="facts-c">YoY Growth</td>
+        	</tr>
+	        	<tr><td height="3" colspan="4"></td></tr>
+        	<tr>
+            	<td class="bold">Revenue</td>
+		            <td align="center">19.90B</td>
+		            <td align="center">18.06B</td>
+   		   			<td align="center">10.17%</td>
+   			</tr>
+        	<tr>
+            	<td class="bold">Net Income</td>
+		            <td align="center">4.96B</td>
+		            <td align="center" class="colorRed">-492.00M</td>
+   		   			<td align="center">1,109.15%</td>
+        	</tr>
+	        	<tr>
+	            	<td class="bold">Operating Margin</td>
+			            <td align="center">30.52%</td>
+			            <td align="center">1.06%</td>
+	   		   			<td align="center">2,779.25%</td>
+	        	</tr>
+    	</tbody></table>
+	</div>
+		<div class="mb-10">
+	<div class="ern-call">
+			Recent Earnings Call for 
+				fiscal
+			Q1&nbsp;
+				2014 
+			was 10/24/2013
+	</div>
+		</div>
+	        	<div class="cl"></div>
+		        	<div subsection="management.changes" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Management Changes</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="DEPARTURE" class="mt-dept"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:23062420&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:23062420" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Gurdeep Singh Pall</span>, Corporate Vice President of Applications and Services <span class="bold"><span class="colorRed">LEFT</span></span> for Skype Technologies S.A.</a>
+						<span class="dc-dt">30-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="DEPARTURE" class="mt-dept"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:23062309&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:23062309" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Wolfgang Ebermann</span>, Chief Operating Officer, Central Eastern Europe <span class="bold"><span class="colorRed">LEFT</span></span> for Insight Enterprises, Inc.</a>
+						<span class="dc-dt">06-Jan-2014</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="INTERNAL MOVE" class="mt-move"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22976799&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22976799" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Anil Bhansali</span>, General Manager of Cloud and Enterprise Engineering, Microsoft India Development Center (MSIDC) <span class="bold"><span class="colorBlue">MOVED</span></span> to Managing Director of Microsoft India (R&amp;D) Pvt Ltd.</a>
+						<span class="dc-dt">22-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="INTERNAL MOVE" class="mt-move"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22765987&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22765987" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Kunle Awosika</span>, Director of Enterprise &amp; Public Sector Business, Nigeria <span class="bold"><span class="colorBlue">MOVED</span></span> to Country Manager, Kenya</a>
+						<span class="dc-dt">01-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+		        	<div subsection="event.timeline" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Event Timeline</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22478464&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22478464" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Nokia CEO Elop to move back to Microsoft post deal: All you need to know</a>
+						<span class="dc-dt">03-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22470891&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22470891" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft buying Nokia's devices and services business, will license patents for about $7.2B</a>
+						<span class="dc-dt">02-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22069703&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22069703" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft Reports Q4 Earnings Of $4.97 Billion, Writes Down $900 Million For The Surface RT</a>
+						<span class="dc-dt">19-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22028420&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22028420" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Report: Apple in talks to buy PrimeSense, which was key to Microsoft's Kinect</a>
+						<span class="dc-dt">16-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22000456&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22000456" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">New Snowden documents show Microsoft helped NSA access encrypted messages</a>
+						<span class="dc-dt">12-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21983830&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21983830" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft major reorganization memo leaks: One Strategy, One Company</a>
+						<span class="dc-dt">11-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21972545&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21972545" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft COO Kevin Turner refuses to lose</a>
+						<span class="dc-dt">10-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21961291&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21961291" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Ignify Awarded 2013 Inner Circle for Microsoft Dynamics and President's Club Recognition</a>
+						<span class="dc-dt">09-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21950899&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21950899" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Cisco Announcing Will Accelerate Microsoft-Based Private Cloud Deployments</a>
+						<span class="dc-dt">08-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21857445&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21857445" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft Launches Windows 8.1 With Revived Start Button</a>
+						<span class="dc-dt">27-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21845153&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21845153" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft Windows 8.1 preview version now available for download</a>
+						<span class="dc-dt">26-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21834383&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21834383" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Yammer adds Klout to their workplace social networking</a>
+						<span class="dc-dt">25-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21777029&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21777029" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft Launches Bug Bounty Program</a>
+						<span class="dc-dt">19-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21736673&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21736673" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft releases an Office 365 app for the iPhone</a>
+						<span class="dc-dt">14-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21687112&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21687112" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft announces hundreds of new games coming to Xbox 360</a>
+						<span class="dc-dt">10-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21627501&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21627501" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft reaches agreement to acquire InRelease business of InCycle Software</a>
+						<span class="dc-dt">03-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21530793&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21530793" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsofts Next-Gen Kinect for Windows Sensor Launching Next Year</a>
+						<span class="dc-dt">23-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21503413&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21503413" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">New Xbox unveiled tonight is expected to lock games to its console - making swapping and trading second-hand games impossible</a>
+						<span class="dc-dt">21-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21379632&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21379632" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Report: Microsoft could buy Barnes &amp; Noble's Nook division</a>
+						<span class="dc-dt">09-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21367684&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AMicrosoftCorporation" catid="254703" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21367684" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Microsoft adds another year to Yahoo's revenue guarantee as part of Internet search alliance</a>
+						<span class="dc-dt">08-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+				<div class="cl"></div>
+			</div>
+			<div class="cl"></div>
+	   </div><div style="position: absolute; display: block;" class="mCSB_scrollTools"><div style="position:relative;" class="mCSB_draggerContainer"><div style="position: absolute; height: 60px; top: 0px;" class="mCSB_dragger ui-draggable"><div style="position: relative; line-height: 60px;" class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+			<div class="moreLink">
+				<a href="redirect.do?rt=portal.event.page&amp;q=C:MicrosoftCorporation" target="Firstrain_window" act="more.click" itemid="C:3864" class="jq_anchor_add_code jq_clicktrack">More</a>
+				<img class="outbnd-lnk" src="http://10.50.1.228:9090/static/ec/images/spacer.gif">
+			</div>
+
+	    	<!-- end companyUnit --></div>
+    	</li>
+    	<li id="compunit-9468" sectionid="C:9468" viewid="C:10186" class="jc-hm-slide jq_slide jq-p-p-section" index="3">
+	    	<div class="companyUnit">
+		         <div class="header">
+		         	<div onclick="showCompetitorList('10186', '177', 'company-events.ftl', '9468', 'C:GoogleInc', this);" act="click" item="configure" class="configBtn">c</div>
+		            <h2 title="Google Inc.">Google Inc.</h2>
+		         <!-- end header --></div>
+        <div class="content jq_vscroll_container mCustomScrollbar _mCS_5"><div style="position:relative; height:100%; overflow:hidden; max-width:100%;" id="mCSB_5" class="mCustomScrollBox"><div style="position:relative; top:0;" class="mCSB_container">
+        	<div class="scroll-pd">
+			<p class="cp-descr">Google, Inc. is a web search and online advertising company that focuses on search, advertising, operating systems and platforms, enterprise and hardware products.</p>
+   		<div class="cl"></div>
+   		<div class="facts">
+	   		<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		        <tbody><tr>
+						<td class="bold">Last Price:</td>
+						<td class="bold">Full Time Employees:</td>
+				</tr>
+		 		<tr>
+						<td>$1,030.42</td>
+						<td>54,604</td>
+		 		</tr>
+			</tbody></table>
+		</div>
+	<div class="facts">
+    	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+        	<tbody><tr>
+            	<td class="facts-c"><div class="facts-hd">KEY FINANCIALS:</div></td>
+            	<td width="60" align="center" class="facts-c">Q3-2013</td>
+	            	<td width="60" align="center" class="facts-c">Q3-2012</td>
+	            	<td width="80" align="center" class="facts-c">YoY Growth</td>
+        	</tr>
+	        	<tr><td height="3" colspan="4"></td></tr>
+        	<tr>
+            	<td class="bold">Revenue</td>
+		            <td align="center">14.89B</td>
+		            <td align="center">14.10B</td>
+   		   			<td align="center">5.62%</td>
+   			</tr>
+        	<tr>
+            	<td class="bold">Net Income</td>
+		            <td align="center">2.97B</td>
+		            <td align="center">2.18B</td>
+   		   			<td align="center">36.49%</td>
+        	</tr>
+	        	<tr>
+	            	<td class="bold">Operating Margin</td>
+			            <td align="center">23.12%</td>
+			            <td align="center">19.40%</td>
+	   		   			<td align="center">19.18%</td>
+	        	</tr>
+    	</tbody></table>
+	</div>
+		<div class="mb-10">
+	<div class="ern-call">
+			Recent Earnings Call for 
+				fiscal
+			Q3&nbsp;
+				2013 
+			was 10/17/2013
+	</div>
+		</div>
+	        	<div class="cl"></div>
+		        	<div subsection="management.changes" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Management Changes</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="HIRE" class="mt-hire"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22635154&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22635154" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Art Levinson</span> <span class="bold"><span class="colorGreen">JOINED</span></span> as Chief Executive Officer of Calico</a>
+						<span class="dc-dt">18-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="DEPARTURE" class="mt-dept"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22465700&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22465700" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Karen Stocks</span>, Managing Director of Mobile and Social Solutions, APAC Region <span class="bold"><span class="colorRed">LEFT</span></span> for Twitter, Inc.</a>
+						<span class="dc-dt">01-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="DEPARTURE" class="mt-dept"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22436746&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22436746" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Hugo Barra</span>, Vice President of Android Development, China <span class="bold"><span class="colorRed">LEFT</span></span> </a>
+						<span class="dc-dt">28-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="DEPARTURE" class="mt-dept"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22243745&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22243745" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Stephen McHenry</span>, Chief Technology Officer <span class="bold"><span class="colorRed">LEFT</span></span> for Symantec Corporation</a>
+						<span class="dc-dt">24-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="DEPARTURE" class="mt-dept"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=MT:22243812&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="MT:22243812" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack"><span class="bold">Bernardo Hernandez</span>, Managing Director of Zagat <span class="bold"><span class="colorRed">LEFT</span></span> for Flickr</a>
+						<span class="dc-dt">06-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+		        	<div subsection="event.timeline" class="dc jq-p-section">
+						<div class="dc-hd jq-hd">Event Timeline</div>
+						<div class="jq-single-item">
+	<ul class="dc-lt">
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23057511&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23057511" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Report: NSA breaks into Yahoo, Google data center links - Computerworld</a>
+						<span class="dc-dt">30-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23045870&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23045870" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">San Franciscos bay barge mystery: Floating data center or Google Glass store</a>
+						<span class="dc-dt">29-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:23034447&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:23034447" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google suspected of building enormous floating structure in San Francisco Bay &mdash; RT USA</a>
+						<span class="dc-dt">28-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22972042&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22972042" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Demystifying DDoS attacks: Google Ideas and Arbor show off new visualisation tool</a>
+						<span class="dc-dt">22-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22937777&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22937777" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google Revenue Rises in Third-quarter</a>
+						<span class="dc-dt">18-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22874730&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22874730" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google + is Adding Shared Endorsements</a>
+						<span class="dc-dt">11-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22832648&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22832648" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google laptop pure Chrome</a>
+						<span class="dc-dt">08-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22785591&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22785591" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google Acquires Flutter for Hand Gesture Recognition Technology</a>
+						<span class="dc-dt">03-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22760900&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22760900" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">European antitrust watchdog gives details of Googles new concessions, now testing them</a>
+						<span class="dc-dt">01-Oct-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22711375&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22711375" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google Launches New Knowledge Graph Tools, ‘Hummingbird' Algorithm &amp; More</a>
+						<span class="dc-dt">26-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22642199&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22642199" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">New Google Wallet App Offers Personal Payments, Supports Loyalty Cards</a>
+						<span class="dc-dt">19-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22556009&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22556009" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google loses appeal in Street View privacy lawsuit</a>
+						<span class="dc-dt">10-Sep-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22365160&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22365160" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google Adds Waze Traffic To Maps App, Search To Waze</a>
+						<span class="dc-dt">20-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22312951&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22312951" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google says Gmail users have no legitimate expectation of privacy</a>
+						<span class="dc-dt">14-Aug-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:22109668&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:22109668" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google launches Chromecast, a US$35 streaming TV HDMI dongle</a>
+						<span class="dc-dt">24-Jul-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21697521&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21697521" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google wants to publish National Security request data</a>
+						<span class="dc-dt">11-Jun-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21475657&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21475657" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google to release a Galaxy S4 device with stock Android</a>
+						<span class="dc-dt">17-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21440178&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21440178" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google unveils Spotify music competitor All Access: Heres what we think</a>
+						<span class="dc-dt">15-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21426921&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21426921" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Google CEO discloses vocal cord problem</a>
+						<span class="dc-dt">14-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	   			<li>
+					
+					<span title="WEB VOLUME" class="web-volume"></span>
+					<div class="dc-in-bk">
+								<a target="Firstrain_window" _href="redirect.do?rt=portal.singleitem.page&amp;id=E:21343293&amp;backUrl=%2Fcompany%2Fbrief%3Fopt%3D1%26q%3DC%3AGoogleInc" catid="254732" onclick="singleItemViewClick(this);" href="javascript:void(0)" act="title.click" itemid="E:21343293" class="dc-evnt-tt jq-b-nav-tt jq_clicktrack">Motorola Abused Position in Injunction Against Apple, EU Says</a>
+						<span class="dc-dt">06-May-2013</span>
+					</div>
+					<div class="cl"></div>
+				</li>
+	</ul>	
+						</div>
+					</div>
+					<div class="cl"></div>
+				<div class="cl"></div>
+			</div>
+			<div class="cl"></div>
+	   </div><div style="position: absolute; display: block;" class="mCSB_scrollTools"><div style="position:relative;" class="mCSB_draggerContainer"><div style="position: absolute; height: 63px; top: 0px;" class="mCSB_dragger ui-draggable"><div style="position: relative; line-height: 63px;" class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+			<div class="moreLink">
+				<a href="redirect.do?rt=portal.event.page&amp;q=C:GoogleInc" target="Firstrain_window" act="more.click" itemid="C:9468" class="jq_anchor_add_code jq_clicktrack">More</a>
+				<img class="outbnd-lnk" src="http://10.50.1.228:9090/static/ec/images/spacer.gif">
+			</div>
+
+	    	<!-- end companyUnit --></div>
+    	</li>
+				</ul>
+			</div>
+			<div class="jcarousel-prev disabled jq_prev"></div>
+			<div class="jcarousel-next jq_next"></div>
+	</div>
+    <div class="cl"></div>
+	    
+	  
+<!-- end comparitorContent --></div>
+
+<div class="ov-mdl" id="over-lay-modal"><span class="cls-btn jq-cls" onclick="hideModalWindow();"></span>
+		<div class="jq-data"></div>
+</div>
+<div class="ov-ly" id="over-lay"></div>
+
+<!-- end mainContent --></div>
+
+</body>
+</html>

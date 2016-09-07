@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Basics Javascript</title>
+<script type="text/javascript" src="../js/basics.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/basic.css">
+</head>
+<body>
+
+<div id="jq_outpt" style="float:right"></div>
+</body>
+</html>
+<script type="text/javascript">
+function Vehicle(hasEngine, hasWheels) { 
+	this.hasEngine = hasEngine || false; 
+	this.hasWheels = hasWheels || false; 
+}
+
+
+function Car (make, model, hp) { 
+	this.hp = hp; 
+	this.make = make; 
+	this.model = model; 
+}
+
+
+Car.prototype = new Vehicle(true, true);
+
+
+Car.prototype.displaySpecs = function () { 
+	console.log(this.make + ", " + this.model + ", " + this.hp + ", " 
+	+ this.hasEngine + ", " + this.hasWheels + ", " + this.hasTrunk); 
+}
+
+Car.prototype.displaySpecs();
+
+Vehicle.prototype.hasTrunk = true;
+
+
+var myAudi = new Car ("Audi", "A4", 150);
+
+myAudi.displaySpecs();
+
+
+
+
+
+
+
+
+
+
+
+function person (name) {
+    this.name = name;
+}
+
+person.prototype.age = "25";
+
+person.prototype.sayHi = function () {
+    console.log("Hi, my name is " + this.name + ", age : " + this.age);
+}
+
+var bob = new person("bob");
+var alice = new person("alice");
+
+//object inheritance function
+function object (o) {
+    function F() {};
+    F.prototype = o;
+    return new F();
+}
+
+tom = object(alice);
+tom.sayHi();
+
+tom.sayHi = function () {
+    console.log("Hi, I am " + this.name + ", age : " + this.age);
+}
+tom.sayHi();
+tom.name = "tom";
+tom.age = "35";
+tom.sayHi();
+
+
+
+
+
+
+
+
+
+
+</script>

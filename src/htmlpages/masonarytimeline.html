@@ -1,0 +1,76 @@
+<html>
+<title>Facebook Timeline Design with jquery and CSS</title>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/masonry-fr.css">
+	<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="../js/fr.vtimeline.js"></script>
+</head>
+<body>
+ 	<div id="container">
+ 	 	<div class="timeline_container">
+            <div class="timeline">
+                <div class="plus"></div>
+            </div>
+        </div>
+	  	<div class="item ">
+           <a href='#' class='deletebox'>X</a>
+	  		<div>1In QA environment there is no proper alerts data for refund messages,  we tested with these store numbers 9750 and 9765. Cloud  you please explain how to create new AD-HOC alert.  
+		</div>
+	  	</div>
+<div class="item ">
+ <a href='#' class='deletebox'>X</a>
+	  	<div>2Thurisind was kin</div>		
+	  </div>
+	  <div class="item ">
+ <a href='#' class='deletebox'>X</a>
+	  		<div>3Thurisind was king of</div>
+	  </div>
+	  
+	  <div class="item">
+ <a href='#' class='deletebox'>X</a>
+	  		<div>4Thurisind was kin</div>		
+	  	</div>
+	  <div class="item">
+ <a href='#' class='deletebox'>X</a>
+	  		<div>5Thurisind was king of the Gepids, an East Germanic Gothic people, from c. 548 to 560. He was the penultimate Gepid king, and succeeded King Elemund by staging a coup d'ÃƒÂ©tat and forcing the king's son into exile. Thurisind's kingdom, known as Gepidia, was located in Central Europe and had its centre in Sirmium, a former Roman</div>		
+	  	</div>
+	  <div class="item">
+ <a href='#' class='deletebox'>X</a>
+	  		<div>
+	  			
+	6Thurisind was king of the Gepids, an East Germanic Gothic people, from c. 548 to 560. He was the penultimate Gepid king, and succeeded King Elemund by staging a coup d'ÃƒÂ©tat and forcing the king's son into exile. Thurisind's kingdom, known as Gepidia, was located in Central Europe and had its centre in Sirmium, a former Roman
+	  		</div>		
+	  </div>
+	</div>
+<script>
+$(function(){
+	
+	function Arrow_Points() { 
+		var s = $('#container').find('.item');
+		$.each(s,function(i,obj){
+			var posLeft = $(obj).css("left");
+			$(obj).addClass('borderclass');
+			if(posLeft == "0px") {
+				html = "<span class='rightCorner'></span>";
+				$(obj).prepend(html);
+			} else {
+				html = "<span class='leftCorner'></span>";
+				$(obj).prepend(html);
+			}
+		});
+	}
+	
+	// Divs
+	//$('#container').masonry({itemSelector : '.item',});
+	//Arrow_Points();
+	
+	var fn1 = function() {
+		var opt = {"selector": ".item", "htmlLeft" : "<span class='leftcorner'></span>", "htmlRight" : "<span class='rightcorner'></span>", "isOriginLeft" : false};
+		$("#container").frvtimeline(opt);
+	};
+	setTimeout(fn1, 0);
+  
+});
+</script>
+</body>
+</html>
